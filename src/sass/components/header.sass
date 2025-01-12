@@ -7,6 +7,10 @@
     padding: 15px
     filter: drop-shadow(-0.174px 4.997px 5px rgba(0,0,0,0.05))
     background-color: #ffffff
+    +media(320px)
+        flex-direction: column
+    +media(768px)
+        flex-direction: row
 .header-icon-canvas 
     display: flex
     flex-direction: row
@@ -21,6 +25,10 @@
     justify-content:space-between
     align-items: center
     gap: 50px
+    +media(320px)
+    flex-direction: column
+    +media(768px)
+        flex-direction: row
     .header-a
         margin: unset
         font-size: 18px

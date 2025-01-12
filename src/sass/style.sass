@@ -9,6 +9,11 @@
 .main 
   display: flex
   justify-content: space-between
+  +media(320px)
+    flex-direction: column
+  +media(1024px)
+    justify-content: space-between
+    flex-direction: unset
 .canvas-image 
     padding: 20px 0
     
@@ -20,12 +25,22 @@
     justify-content: center
     display: flex
     position: relative
+    +media(320px)
+      flex-direction: column
+      width: 100%
+    +media(1024px)
+      flex-direction: row
+      width: 50%
 .options-container 
     width: 50%
     background-color: #f2f9fb
     display: flex
     justify-content: center 
     align-items: center 
+    +media(320px)
+      width: 100%
+    +media(1024px)
+      width: 50%
     
 .options-form
     width: 60%
@@ -36,7 +51,15 @@
     gap: 45px
     display: flex
     flex-direction: column
+    +media(320px)
+      width: 100%
+    +media(360px)
+      width: 80%
+    +media(768px)
+      width: 60%
     +media(1024px)
+      width: 100%
+    +media(1224px)
       width: 90%
     .total
         display: flex 
@@ -97,6 +120,13 @@
 .size-options 
   display: flex
   gap: 10px
+  +media(320px)
+    flex-direction: column
+  +media(1024px)
+    gap: 2px
+    flex-direction: row
+  +media(1224px)
+    gap: 10px
 
   label 
     display: flex
@@ -155,7 +185,10 @@
   display: flex
   align-items: center
   gap: 10px
-
+  +media(320px)
+    flex-direction: column
+  +media(1024px)
+    flex-direction: row
   label 
     position: relative
     display: flex
@@ -211,7 +244,7 @@
     &:active 
       background-color: #3e8e41
     
-.canvas-wrapper#canvas-wrapper
+.canvas-wrapper
   width: 300px 
   height: 350px
   transform: translate(-50%, -50%)
@@ -221,6 +254,11 @@
   position: absolute
   top: 50%
   left: 50%
+  bottom: 50%
+#canvas-box 
+  background-color: lightgray
+  border: 1px dashed black
+
 
 
     
