@@ -110,6 +110,13 @@
     &:hover 
         background-color: #218838
 
+.custom-size-wrapper 
+  display: none
+
+  input#toggle-custom:checked
+    display: block
+
+
 .extra-options 
     display: flex
     flex-direction: column 
@@ -163,6 +170,18 @@
 
     &:hover 
       background-color: #e0e0e0
+.radio
+  appearance: none
+  padding: 10px
+  color: #fff
+  background-color: red
+  border: 2px solid transparent
+.radio:before
+    content: attr(value)
+.radio:checked
+  border-color: #000
+
+
 .button-sizeop
   padding: 5px 10px
   border: none

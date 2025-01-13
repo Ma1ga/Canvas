@@ -40,15 +40,18 @@ html(lang="uk")
                                 label
                                     input#size90x150(type="radio" name="size" value="90x150")
                                     span 90x150
-                                button.button-sizeop#button-size(type="button") Підрахувати
+                            
+                                input.radio#toggle-custom(type="radio" value="Підрахувати")
+                                
 
-                            .custom-size
-                                label
-                                    input#width-custom-size(type="number" placeholder="Ширина")
-                                span x
-                                label
-                                    input#height-custom-size(type="number" placeholder="Висота")
-                                button#button-custom-size(type="button") Підрахувати
+                            .custom-size-wrapper
+                                .custom-size
+                                    label
+                                        input#width-custom-size(type="number" placeholder="Ширина")
+                                    span x
+                                    label
+                                        input#height-custom-size(type="number" placeholder="Высота")
+                                    button#button-custom-size(type="button") Подраховать
 
                             h3 Додаткові опції
                             .extra-options
