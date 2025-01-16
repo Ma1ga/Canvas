@@ -5,6 +5,9 @@ html(lang="uk")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet" href="css/styles.css")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous")
         script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous")
         
@@ -26,7 +29,7 @@ html(lang="uk")
                             
                     .options-container
                         form.options-form
-                            h2 Виберіть розмір
+                            h2.main-option-style Виберіть розмір
                             .size-options
                                 label
                                     input#size30x30(type="radio" name="size" value="30x30")
@@ -40,11 +43,12 @@ html(lang="uk")
                                 label
                                     input#size90x150(type="radio" name="size" value="90x150")
                                     span 90x150
-                            
-                                input.radio#toggle-custom(type="radio" value="Підрахувати")
+                                label 
+                                    input.radio#toggle-custom(type="radio" name="size" value="Підрахувати")
+                                    span#toggle-custom Підрахувати
                                 
 
-                            .custom-size-wrapper
+                            .custom-size-wrapper#custom-size-wrapper(style="display: none;")
                                 .custom-size
                                     label
                                         input#width-custom-size(type="number" placeholder="Ширина")
@@ -52,22 +56,22 @@ html(lang="uk")
                                     label
                                         input#height-custom-size(type="number" placeholder="Высота")
                                     button#button-custom-size(type="button") Подраховать
-
-                            h3 Додаткові опції
+                            hr
+                            h3.main-option-style Додаткові опції
                             .extra-options
                                 label
-                                    input.extraInput#checked-extraOption1(type="checkbox" value="35")
-                                    span Дорожче полотно
+                                    input.extraInput#checked-extraOption1.style-extra(type="checkbox" value="35")
+                                    span.style-extra Дорожче полотно
                                 label
-                                    input.extraInput#checked-extraOption2(type="checkbox" value="10")
-                                    span З рамкою
+                                    input.extraInput#checked-extraOption2.style-extra(type="checkbox" value="10")
+                                    span.style-extra З рамкою
                                 label
-                                    input.extraInput#checked-extraOption3(type="checkbox" value="40")
-                                    span З доставкою (Нова Пошта)
-
+                                    input.extraInput#checked-extraOption3.style-extra(type="checkbox" value="40")
+                                    span.style-extra З доставкою (Нова Пошта)
+                            hr
                             .total
                                 .buy-main
-                                    button.buy-button(type="submit") Придбати
+                                    button.buy-button(type="submit" id="buy-button") Придбати
                                 .price-main
                                     span.total-label Загальна сума:
                                     span.total-price 0 грн

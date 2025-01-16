@@ -38,17 +38,23 @@
     justify-content: center 
     align-items: center 
     +media(320px)
+      padding-top: 15px
       width: 100%
     +media(1024px)
+      padding: unset
       width: 50%
-    
+.main-option-style
+  font-size: 34px
+  color: #333333
+  font-weight: 700
+  font-family: "Open Sans"
 .options-form
     width: 60%
     border-radius: 10px
     filter: drop-shadow(0 0 5px rgba(0,0,0,0.05))
     background-color: #ffffff
     padding: 20px
-    gap: 45px
+    gap: 25px
     display: flex
     flex-direction: column
     +media(320px)
@@ -60,11 +66,11 @@
     +media(1024px)
       width: 100%
     +media(1224px)
-      width: 90%
+      width: 85%
     .total
         display: flex 
         flex-direction: row
-        width: 85%
+        width: 80%
         display: flex
         justify-content: space-between
         align-items: center
@@ -73,22 +79,33 @@
         border-radius: 10px
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
         margin-top: 20px
+        +media(320px)
+          width: 100%
+          gap: 10px
+          flex-direction: column
+        +media(700px)
+          flex-direction: unset
+          gap: unset
+        +media(1024px)
+          width: 80%
         
         .price-main
-            width: 100%
+            width: 70%
             border-radius: 10px
-            gap: 5px
-            justify-content: space-between
-            background-color: #d6edfb
+            gap: 15px
             display: flex
             flex-direction: row
-            align-items: flex-end
+            align-items: center
+            +media(320px)
+              flex-direction: column
+            +media(700px)
+              flex-direction: row
 
             .total-label 
               font-size: 18px
               text-transform: uppercase
               color: #333333
-              font-weight: 700
+              font-weight: 900
               font-family: "Open Sans"
               text-align: center
             .total-price 
@@ -110,8 +127,7 @@
     &:hover 
         background-color: #218838
 
-.custom-size-wrapper 
-  display: none
+
 
   input#toggle-custom:checked
     display: block
@@ -121,9 +137,11 @@
     display: flex
     flex-direction: column 
     gap: 10px
+    
     label
         display: flex
         gap: 5px
+        
 .size-options 
   display: flex
   gap: 10px
@@ -170,6 +188,11 @@
 
     &:hover 
       background-color: #e0e0e0
+.style-extra 
+  font-size: 18px
+  color: #4c7792
+  font-weight: 700
+  font-family: "Open Sans"
 .radio
   appearance: none
   padding: 10px

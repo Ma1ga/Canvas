@@ -6,6 +6,18 @@ header
                 img.canvas-img(src="img/canvas-icon.png", alt="")
                 h2.canvas-header-text Kanvas
             .header-info 
-                a.header-a(href="#")  Галерея
-                a.header-a(href="#")  Про нас
-                a.header-a-tel(href="tel:+380123456789") замовити дзвінок
+                a.header-a(href="mailto:vlad@htmlbook.ru")  Галерея
+                a.header-a(href="mailto:vlad@htmlbook.com")  Про нас
+                a.header-a-tel#order-call(href="javascript:void(0);") Замовити дзвінок
+.call-popup(style="display: none;")
+  .call-popup-content
+    span.close-popup close
+    h2 Попередній дзвінок
+    form
+      label
+        span Ім'я:
+        input(type="text" placeholder="Ваше ім'я")
+      label
+        span Телефон:
+        input(type="tel" placeholder="Ваш номер телефону")
+      button(type="submit") Замовити дзвінок
